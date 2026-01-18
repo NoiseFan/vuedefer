@@ -20,9 +20,7 @@ export default defineConfig({
           '/guide/': [
             {
               text: 'Guide',
-              items: [
-                { text: 'Getting Started', link: '/guide/getting-started' },
-              ],
+              link: '/guide/getting-started',
             },
           ],
         },
@@ -39,9 +37,7 @@ export default defineConfig({
           '/zh/guide/': [
             {
               text: '指南',
-              items: [
-                { text: '快速开始', link: '/zh/guide/getting-started' },
-              ],
+              link: '/zh/guide/getting-started',
             },
           ],
         },
