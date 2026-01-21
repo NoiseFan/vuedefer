@@ -2,6 +2,15 @@
 defineProps<{
   timing: number
 }>()
+
+const emit = defineEmits<{
+  change: [value: number]
+}>()
+
+function emitChange(value: number) {
+  emit('change', value)
+  return value
+}
 </script>
 
 <template>
@@ -17,7 +26,7 @@ defineProps<{
         This component is now mounted!
       </p>
       <p class="update-info">
-        Live Timing: <strong>{{ timing }}</strong>
+        Live Timing: <strong>{{ emitChange(timing) }}</strong>
       </p>
       <p class="description">
         When you scroll this component out of viewport, updates will be frozen.
